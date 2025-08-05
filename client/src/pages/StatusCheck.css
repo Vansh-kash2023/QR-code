@@ -1,0 +1,426 @@
+.status-check {
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-container {
+  max-width: 600px;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.faculty-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.faculty-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.faculty-info h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.department {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.office {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.status-display {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.status-indicator-main {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite;
+}
+
+.status-icon {
+  font-size: 3rem;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.status-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.status-description {
+  font-size: 1.25rem;
+  color: #666;
+  margin: 0 0 2rem 0;
+}
+
+.status-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.meta-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meta-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.meta-value {
+  color: #333;
+  font-weight: 500;
+}
+
+.binary-code {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  background: #e3f2fd;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: #1976d2;
+}
+
+.custom-message {
+  background: #fff3e0;
+  border: 1px solid #ffcc02;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.custom-message h3 {
+  margin: 0 0 0.75rem 0;
+  color: #f57c00;
+  font-size: 1.1rem;
+}
+
+.custom-message p {
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.status-legend {
+  padding: 2rem;
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+}
+
+.status-legend h3 {
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.legend-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.legend-item.current {
+  background: rgba(102, 126, 234, 0.1);
+  border: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.legend-indicator {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.legend-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.legend-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.legend-binary {
+  font-size: 0.8rem;
+  color: #666;
+  font-family: 'Courier New', monospace;
+}
+
+.action-buttons {
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.refresh-btn,
+.browse-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.refresh-btn {
+  background: #667eea;
+  color: white;
+}
+
+.refresh-btn:hover {
+  background: #5a6fd8;
+  transform: translateY(-2px);
+}
+
+.browse-btn {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  border: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.browse-btn:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.system-info {
+  padding: 1.5rem 2rem;
+  background: #f1f3f4;
+  border-top: 1px solid #e9ecef;
+  text-align: center;
+}
+
+.real-time-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #4caf50;
+}
+
+.indicator-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4caf50;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0.3;
+  }
+}
+
+.system-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.loading-spinner,
+.error-state {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.error-state h2 {
+  color: #f44336;
+  margin-bottom: 1rem;
+}
+
+.retry-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.retry-btn:hover {
+  background: #d32f2f;
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .status-check {
+    padding: 1rem;
+  }
+
+  .faculty-header {
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .faculty-avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .faculty-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .status-display {
+    padding: 2rem 1.5rem;
+  }
+
+  .status-indicator-main {
+    width: 100px;
+    height: 100px;
+  }
+
+  .status-icon {
+    font-size: 2.5rem;
+  }
+
+  .status-name {
+    font-size: 2rem;
+  }
+
+  .legend-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .meta-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .status-container {
+    border-radius: 12px;
+  }
+
+  .faculty-header {
+    padding: 1rem;
+  }
+
+  .status-display {
+    padding: 1.5rem 1rem;
+  }
+
+  .status-legend {
+    padding: 1.5rem;
+  }
+
+  .action-buttons {
+    padding: 1rem;
+  }
+}
